@@ -12,9 +12,9 @@ const PricingSection = () => {
           Choose the plan that fits your needs. Upgrade or downgrade anytime.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
           {/* Starter */}
-          <div className="bg-white rounded-2xl p-6 text-left shadow-sm">
+          <div className="bg-white rounded-2xl p-6 text-left shadow-sm hover:-translate-y-2 transition duration-300">
         <h3 className="text-lg font-semibold mb-1 text-[#101727]">Starter</h3>
             <p className="text-[#627382] text-sm mb-4">
               Perfect for getting started
@@ -37,7 +37,7 @@ const PricingSection = () => {
           </div>
 
           {/* Pro */}
-          <div className="relative rounded-2xl p-6 text-left text-white bg-linear-to-r from-[#4F39F6] to-[#9514FA] shadow-md">
+          <div className="relative rounded-2xl p-6 text-left text-white bg-linear-to-r from-[#4F39F6] to-[#9514FA] shadow-md hover:-translate-y-2 transition duration-300">
             {/* Badge */}
             <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-yellow-100 text-xs px-3 py-1 rounded-full text-yellow-800">
               Most Popular
@@ -67,7 +67,7 @@ const PricingSection = () => {
           </div>
 
           {/* Enterprise */}
-          <div className="bg-white rounded-2xl p-6 text-left shadow-sm">
+          <div className="bg-white rounded-2xl p-6 text-left shadow-sm hover:-translate-y-2 transition duration-300">
             <h3 className="text-lg font-semibold mb-1 text-[#101727]">Enterprise</h3>
             <p className="text-[#627382] text-sm mb-4">
               For teams and businesses

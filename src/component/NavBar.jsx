@@ -3,8 +3,7 @@ import { FiShoppingCart } from 'react-icons/fi';
 
 const NavBar = () => {
     return (
-        <div>
-        <div className="navbar bg-base-100 shadow-sm py-2">
+        <div className="navbar bg-base-100 shadow-sm py-2 sticky top-0 z-50">
       <div className="navbar-start">
         <div className="text-4xl font-bold bg-linear-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">
           <h2>DigiTools</h2>
@@ -35,7 +34,6 @@ const NavBar = () => {
         <a className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] p-4 rounded-full text-white">Get Started</a>
       </div>
     </div>
-        </div>
     );
 };
 
