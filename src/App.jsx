@@ -24,7 +24,7 @@ function App() {
 
   return (
     <>
-    <NavBar></NavBar>
+    <NavBar carts={carts}></NavBar>
     <Banner></Banner>
     <StateSection></StateSection>
 
@@ -41,7 +41,7 @@ function App() {
             {/* Tabs */}
             <div className="tabs tabs-box justify-center bg-white shadow-none">
                 <input type="radio" name="my_tabs_1" className="tab rounded-full w-40" aria-label="Products" onClick={() => setActiveTab("product")} defaultChecked/>
-                <input type="radio" name="my_tabs_1" className="tab rounded-full w-40" aria-label="Cart(2)" onClick={() => setActiveTab("cart")} />
+                <input type="radio" name="my_tabs_1" className="tab rounded-full w-40" aria-label={`Cart (${carts.length})`} onClick={() => setActiveTab("cart")} />
             </div>
             
       </div>
@@ -51,7 +51,7 @@ function App() {
     
     
     {activeTab === "product" && <Tools dataPromise={dataPromise} carts={carts} setCarts={setCarts}></Tools>}
-    {activeTab === "cart" && <Cart carts={carts}></Cart>}
+    {activeTab === "cart" && <Cart carts={carts} setCarts={setCarts}></Cart>}
 
 
      {/* <Cart></Cart> */}

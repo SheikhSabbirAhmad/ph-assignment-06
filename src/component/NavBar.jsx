@@ -1,7 +1,7 @@
 import React from 'react';
 import { FiShoppingCart } from 'react-icons/fi';
 
-const NavBar = () => {
+const NavBar = ({carts}) => {
     return (
         <div className="navbar bg-base-100 shadow-sm py-2 sticky top-0 z-50">
       <div className="navbar-start">
@@ -29,7 +29,12 @@ const NavBar = () => {
         </ul>
       </div>
       <div className="navbar-end gap-5">
-        <button><FiShoppingCart></FiShoppingCart></button>
+                <div className="relative cursor-pointer">
+                    <FiShoppingCart size={24} />
+                    <span className="absolute -top-3 -right-2 bg-red-500 text-white text-xs px-2 py-[2px] rounded-full">
+                        {carts.length}
+                    </span>
+                </div>
         <h3 className='text-[#101727] font-semibold'>Login</h3>
         <a className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] p-4 rounded-full text-white">Get Started</a>
       </div>
