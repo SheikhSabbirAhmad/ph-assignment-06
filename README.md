@@ -47,10 +47,10 @@ This project is built to simulate an e-commerce platform specifically for digita
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/digital-tools-buying-website.git
+git clone https://github.com/SheikhSabbirAhmad/ph-assignment-06.git
 
 # Navigate to project folder
-cd digital-tools-buying-website
+cd ph-assignment-06
 
 # Install dependencies
 npm install
