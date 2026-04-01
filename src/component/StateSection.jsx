@@ -2,7 +2,6 @@ import React from 'react';
 
 const StateSection = () => {
     return (
-        <div>
             <div className="py-12 flex justify-center">
       
       <div className="w-full rounded-xl 
@@ -31,7 +30,6 @@ const StateSection = () => {
       </div>
 
     </div>
-        </div>
     );
 };
 

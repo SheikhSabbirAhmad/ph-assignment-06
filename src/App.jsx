@@ -28,7 +28,7 @@ function App() {
     <Banner></Banner>
     <StateSection></StateSection>
 
-    {/* Tab..... */}
+    {/* Tab_Code_Here..... */}
     <div>
             {/* Header */}
             <div className='text-center mb-12 mt-12'>
@@ -38,23 +38,35 @@ function App() {
                 </p>
             </div>
 
-            {/* Tabs */}
-            <div className="tabs tabs-box justify-center bg-white shadow-none">
-                <input type="radio" name="my_tabs_1" className="tab rounded-full w-40" aria-label="Products" onClick={() => setActiveTab("product")} defaultChecked/>
-                <input type="radio" name="my_tabs_1" className="tab rounded-full w-40" aria-label={`Cart (${carts.length})`} onClick={() => setActiveTab("cart")} />
-            </div>
-            
-      </div>
-    
-    {/* <Tools dataPromise={dataPromise}></Tools> */}
+        
+        {/* Tabs */}
+        <div className="tabs tabs-box justify-center bg-white shadow-none rounded-full p-1">
 
+              <input
+              type="radio"
+              name="my_tabs_1"
+              className="tab rounded-full w-40 text-gray-700 checked:bg-linear-to-r checked:from-[#4F39F6] checked:to-[#9514FA] checked:text-white border-none"
+              aria-label="Products"
+              onClick={() => setActiveTab("product")}
+              defaultChecked
+            />
+
+              <input
+                type="radio"
+                name="my_tabs_1"
+                className="tab rounded-full w-40 text-gray-700 checked:bg-linear-to-r checked:from-[#4F39F6] checked:to-[#9514FA] checked:text-white border-none"
+                aria-label={`Cart (${carts.length})`}
+                onClick={() => setActiveTab("cart")}
+              />
+
+        </div>
+            
+    </div>
     
-    
+  
     {activeTab === "product" && <Tools dataPromise={dataPromise} carts={carts} setCarts={setCarts}></Tools>}
     {activeTab === "cart" && <Cart carts={carts} setCarts={setCarts}></Cart>}
 
-
-     {/* <Cart></Cart> */}
     <GetStartedSection></GetStartedSection>
     <PricingSection></PricingSection>
     <ReadySection></ReadySection>
