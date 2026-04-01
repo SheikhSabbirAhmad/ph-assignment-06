@@ -1,5 +1,6 @@
 import React from 'react';
 import { toast } from 'react-toastify';
+import cartImg from "../assets/products/orange-cart.png";
 
 const Cart = ({carts, setCarts}) => {
     
@@ -16,11 +17,20 @@ const Cart = ({carts, setCarts}) => {
   }
     return (
     
-         <div className="p-6 bg-gray-100 min-h-screen">
+         <div className="p-6 bg-white min-h-screen max-w-7xl mx-auto border border-gray-200 rounded-xl mt-4">
       <h2 className="text-2xl font-bold text-[#101727] mb-6">Your Cart</h2>
 
       {
-        carts.length === 0 ? <p className='text-center text-4xl font-bold pt-20'>Cart is empty!!</p> : 
+        carts.length === 0 ? (
+            <div className="text-center pt-20">
+    <img
+      src={cartImg}
+      alt="Empty Cart"
+      className="w-80 mx-auto mb-4"
+    />
+    <p className="text-4xl font-bold text-gray-500">Cart is empty!!</p>
+  </div>
+        ) : 
         <>
              <div className="space-y-4">
         {carts.map((item) => (
